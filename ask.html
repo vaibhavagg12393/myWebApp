@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Project Awesome</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"  media="screen,projection"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+</head>
+<style>
+*{margin: 0;padding:0px}
+
+.header{
+    width: 100%;
+    background-color: #0d77b6 !important;
+    height: 60px;
+}
+
+.showLeft{
+    background-color: #0d77b6 !important;
+    border:1px solid #0d77b6 !important;
+    text-shadow: none !important;
+    color:#fff !important;
+    padding:10px;
+}
+
+.icons li {
+    background: #000000;
+    height: 5px;
+    width: 5px;
+    line-height: 0;
+    list-style: none outside none;
+    margin-right: 15px;
+    margin-top: 3px;
+    vertical-align: top;
+    border-radius:50%;
+    pointer-events: none;
+}
+
+.btn-left {
+    left: 0.4em;
+}
+
+.btn-right {
+    right: 0.4em;
+}
+
+.btn-left, .btn-right {
+    position: absolute;
+    top: 0.24em;
+}
+
+.dropbtn {
+    position: fixed;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #FFFFFF;
+}
+
+.dropdown1 {
+    color:black;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: relative;
+    margin-top: 60px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 5px;
+}
+.round {
+            display:block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            padding:5px 4px;
+        }
+.round img {
+            width: 45px;
+        }
+.round1 {
+            display:block;
+            width: 40px;
+            height: 40px;
+            border-radius: 30%;
+            overflow: hidden;
+            padding:5px 4px;
+        }
+.round1 img {
+            width: 45px;
+        }
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+
+</style>
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+function changeLanguage(language) {
+    var element = document.getElementById("url");
+    element.value = language;
+    element.innerHTML = language;
+}
+
+function showDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content1");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
+<body style="background-color:#eeeded">
+
+
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button" style="float:left"><img class="round1" src="./images/discover.ico" style="float:left"><font size="5">&nbsp;Discover</font></a>
+  <a href="#" class="w3-bar-item w3-button" style="float:left"><img class="round1" src="./images/ask.jpg" style="float:left"><font size="5">&nbsp;Ask</font></a>
+  <a href="#" class="w3-bar-item w3-button" style="float:left"><img class="round1" src="./images/recommendations.png" style="float:left"><font size="5">&nbsp;Recommendations</font></a>
+  <a href="#" class="w3-bar-item w3-button" style="float:left"><img class="round1" src="./images/heart.png" style="float:left"><font size="5">&nbsp;My Places</font></a>
+  <a href="#" class="w3-bar-item w3-button" style="float:left"><img class="round1" src="./images/profile.png" style="float:left"><font size="5">&nbsp;My Profile</font></a>
+</div>
+<div zclass="w3-main" id="main">
+
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>Ask for recommendations from friends, bloggers and experts</h1>
+  </div>
+</div>
+    <br>
+    <div class="card" style="flaot:left">
+        <div class="container" style="flaot:left">
+            <h4><b>Coffee shops</b></h4>
+            <p><img src="./images/images.png" alt="clock" style="width:10%"> March 01 2017</p>
+            <p><img src="./images/location.png" alt="location" style="width:10%"> Jersey City</p>
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#"><font size="3" style="">ASK AGAIN</a></font>&nbsp;&nbsp;&nbsp;
+        <a href="#"><font size="3">SHARE</font></a>
+        <div class="dropdown1" style="float:right">
+        <ul class="dropbtn icons">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        </div>
+        <div id="myDropdown" class="dropdown-content1">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <h4><b>Private query</b></h4>
+            <p><img src="./images/images.png" alt="clock" style="width:10%"> March 01 2017</p>
+            <p><img src="./images/location.png" alt="location" style="width:10%"> Jersey City</p>
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">ASK AGAIN</a>&nbsp;&nbsp;&nbsp;
+        <a href="#">SHARE</a>
+    </div>
+
+    <div class="card">
+        <img src="./images/download.jpeg" alt="Coffee" style="width:100%">
+        <div class="container">
+            <h4><b>Coffee shops</b></h4>
+            <p><img src="./images/images.png" alt="clock" style="width:10%"> Fenruary 10 2017</p>
+            <p><img src="./images/location.png" alt="location" style="width:10%"> Jersey City</p>
+        </div>
+        <div class="container">
+            <img class="round" src="./images/download.jpeg" style="float:left">
+            <img class="round" src="./images/download.jpeg">
+        </div>
+    </div>
+
+
+
+</body>
+</html>
